@@ -5,18 +5,32 @@
 }
 
 html{
-  background-color:#ffda99;
-  height:100vh;
-  width:100vw;
   display:flex;
-  justify-content: center; 
-  align-items:center;
+  width:100vw;
+  height:100vh;
+  background-color:#ffda99;
+}
+
+body{
+  display:flex;
+  flex-direction:column;
+  width:100%;
 }
 
 main{
   display:flex;
   flex-wrap:wrap;
-  border:1px solid black;
+  flex-grow:1;
+  width:100%;
+}
+
+#calendar{
+  background: rgb(214,231,241);
+  background: linear-gradient(0deg, rgba(214,231,241,0.6) 0%, rgba(120,171,222,1) 100%);
+  display:flex;
+  flex-direction:column;
+  flex-grow:900;
+  border-left:1px solid black;
 }
 
 #year{
@@ -26,7 +40,7 @@ main{
   color:white;
   font-size:2em;
   border-bottom:3px solid;
-  border-image:linear-gradient(90deg, rgba(255,255,255,0) 1%, #FF6633 50%, rgba(255,255,255,0) 100%);
+  border-image:linear-gradient(90deg, rgba(255,255,255,0) 1%, #FFFF 50%, rgba(255,255,255,0) 100%);
   border-image-slice: 1;
 
 }
@@ -39,6 +53,20 @@ main{
 
 #year h2:hover{
 	cursor:default;
+}
+
+.year_fade{
+  font-size:0.8em;
+  opacity:0.7;
+  filter:blur(1px);
+}
+
+#year_h2:hover .year_fade{
+  opacity:1;
+  filter:blur(0);
+  transition:0.6s;
+  font-size:1em;
+
 }
 
 .fa-chevron-right:hover{
@@ -57,14 +85,11 @@ main{
   display:grid;
   grid-template-rows: 7% repeat(5, 1fr);
   grid-template-columns: repeat(7, 1fr);
-  height:60vh;
-  width:60vw;
 }
 
 #list_months{
   display:flex;
   flex-wrap:wrap;
-  max-width:60vw;
   font-family:'Syne', 'Courier';
   font-size:1.5em;
   color:white;
@@ -85,18 +110,29 @@ main{
 .month_name:hover{
   cursor:pointer;
   background-color:#6E8AA9;
+  border-bottom-left-radius:20px;
+  border-bottom-right-radius:20px;
 }
 
-.day_number, .day_number_selected, .day_number_out, .day_number_up, .day_names, .day_names_selected{
+.day_number, .day_name{
   text-align:right;
   padding-top:2%;
   padding-right:5%;
   font-family:'Syne', 'Courier';
   color:#330000;
+  padding:10%;
+  min-width:5%;
+}
+
+.day_number{
   font-size:1.2em;
 }
 
-.day_names, .day_names_selected{
+.day_name{
+  font-size:1.3vw;
+}
+
+.day_name{
   display:flex;
   justify-content: center;
   align-items:center;
@@ -105,7 +141,21 @@ main{
   flex-wrap:wrap;
 }
 
-.day_names_selected{
+.day_number:hover{
+  background-color:#6E8AA9;
+  cursor:pointer;
+  border-radius:6px;
+}
+
+.day_number_up, .day_number_out{
+  background:#99A2A5;
+}
+
+.day_name_last{
+  padding-right:0;
+}
+
+.day_name_selected{
 	background-color:#6E8AA9;
 	border-top-left-radius:20px;
 	border-top-right-radius:20px;
@@ -115,34 +165,135 @@ main{
 	border:1px solid black;
 	background-color:#DEDDD5;
 	border-radius:6px;
+  font-weight:600;
 }
 
-#calendar{
-  background: rgb(214,231,241);
-  background: linear-gradient(0deg, rgba(214,231,241,0.6) 0%, rgba(120,171,222,1) 100%);
+.day_number:nth-child(7n), .day_name:nth-child(7){
+  color:#CC0033;
 }
 
-#line_red, #line_green, #line_yellow, #line_blue{
+.day_name:hover{
+  cursor:pointer;
+  background-color:#6E8AA9;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+}
+
+.lines{
 	width:80%;
 	height:4px;
 	margin-left:11%;
-	margin-top:8%;
-	margin-bottom:8%;
+  margin-top:5%;
 	border-radius:80px;
 }
 
-#line_red{
+.line_red{
 	background-color:#FF0033;
 }
 
-#line_green{
+.line_green{
 	background-color:#009900;
 }
 
-#line_yellow{
+.line_yellow{
 	background-color:#FFCC00;
 }
 
-#line_blue{
+.line_blue{
 	background-color:#0066FF;
+}
+
+.day_number_booked .lines{
+  opacity:0.4;
+}
+
+
+/****BLOC GAUCHE*****/
+
+
+#today{
+  display:flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  flex-grow:1;
+  width:30%;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(222,122,147,1) 80%);
+  color:white;
+  font-family:'Syne', 'Courier';
+  padding:2%;
+}
+
+#today_h2, #today_h3{
+  text-align:right;
+  font-size:2em;
+  letter-spacing: .2em;
+}
+
+#today_number{
+  font-size:3em;
+  color:#003399;
+  text-shadow:1px 0 1px grey, 0 1px 1px grey;
+  margin-left:2%;
+}
+
+#today_year{
+  font-size:150%;
+}
+
+#today_month{
+  font-size:110%;
+  letter-spacing:.3em;
+}
+
+#today_day{
+  font-size:110%;
+}
+
+#todo_list{
+  list-style-type:none;
+}
+
+#todo_list i{
+  font-size:0.5em;
+}
+
+#today_todo{
+  display:flex;
+  flex-grow:1;
+  align-items:center;
+}
+
+#todo_list{
+  display:flex;
+  flex-direction:column;
+}
+
+.todo{
+  font-size:1.5em;
+  padding:5%;
+}
+
+#todo_list time{
+  font-size:120%;
+}
+
+.todo:nth-child(1) i, .todo:nth-child(1) time{
+  color:#FF0033;
+  text-shadow:1px 0 1px grey;
+}
+
+.todo:nth-child(2) i, .todo:nth-child(2) time{
+  color:#009900;
+  text-shadow:1px 0 1px grey;
+}
+
+.todo:nth-child(3) i, .todo:nth-child(3) time{
+  color:#FFCC00;
+  text-shadow:1px 0 1px grey;
+}
+
+.todo:nth-child(4) i, .todo:nth-child(4) time{
+  color:#0066FF;
+  text-shadow:1px 0 1px grey;
 }

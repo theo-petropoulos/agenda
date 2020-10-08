@@ -16,22 +16,27 @@
 
 	<section id="today">
 		<header>
-			<h2 id="today_h2">Jeudi 8</h2>
-			<h3 id="tody_h3">Octobre<br>2020</h3>
+			<time datetime="2020-10-08">
+				<h2 id="today_h2"><span id="today_day">Jeudi</span> <span id="today_number">8</span></h2>
+				<h3 id="today_h3"><span id="today_month">Octobre</span><br><span id="today_year">2020</span></h3>
+			</time>
 		</header>
 
-		<section id="todo_list">
-			<div class="todo">09h00 - Meeting Satoshi Nakamoto</div>
-			<div class="todo">11h00 - Présentation ICON</div>
-			<div class="todo">16h00 - Goûter / Acheter Nutella</div>
-			<div class="todo">18h00 - Reveal Radix DLT</div>
+		<section id="today_todo">
+			<ul id="todo_list">
+				<li class="todo"><i class="fa fa-square" aria-hidden="true"></i> <time datetime="09:00">09h00</time> - Meeting <strong>Satoshi Nakamoto</strong></li>
+				<li class="todo"><i class="fa fa-square" aria-hidden="true"></i> <time datetime="11:00">11h00</time> - Presentation <strong>ICON</strong></li>
+				<li class="todo"><i class="fa fa-square" aria-hidden="true"></i> <time datetime="16:00">16h00</time> - Goûter / Acheter <strong>Nutella</strong></li>
+				<li class="todo"><i class="fa fa-square" aria-hidden="true"></i> <time datetime="18:00">18h00</time> - Reveal <strong>Radix DLT</strong></li>
+			</ul>
 		</section>
+
 	</section>
 
 	<section id="calendar">
 
 		<header id="year">
-			<h2 id="year_h2"><i class="fa fa-chevron-left" aria-hidden="true"></i>2020<i class="fa fa-chevron-right" aria-hidden="true"></i></h2>
+			<h2 id="year_h2"><span class="year_fade"> 2019 </span><i class="fa fa-chevron-left" aria-hidden="true"></i>2020<i class="fa fa-chevron-right" aria-hidden="true"></i><span class="year_fade"> 2021 </span></h2>
 		</header>
 
 		<div id="months">
@@ -45,36 +50,40 @@
 				<li class="month_name">Juil.</li>
 				<li class="month_name">Août</li>
 				<li class="month_name">Sep.</li>
-				<li class="month_name_selected">Oct.</li>
+				<li class="month_name month_name_selected">Oct.</li>
 				<li class="month_name">Nov.</li>
 				<li class="month_name">Dec.</li>
 			</ul>
 		</div>
 
 		<div id="list_days">
-			<div class="day_names">Lundi</div>
-			<div class="day_names">Mardi</div>
-			<div class="day_names">Mercredi</div>
-			<div class="day_names_selected">Jeudi</div>
-			<div class="day_names">Vendredi</div>
-			<div class="day_names">Samedi</div>
-			<div class="day_names">Dimanche</div>
-			<div class="day_number_out">28</div>
-			<div class="day_number_out">29</div>
-			<div class="day_number_out">30</div>
+			<div class="day_name">Lundi</div>
+			<div class="day_name">Mardi</div>
+			<div class="day_name">Mercredi</div>
+			<div class="day_name day_name_selected">Jeudi</div>
+			<div class="day_name">Vendredi</div>
+			<div class="day_name">Samedi</div>
+			<div class="day_name">Dimanche</div>
+			<div class="day_number day_number_out">28</div>
+			<div class="day_number day_number_out">29</div>
+			<div class="day_number day_number_out">30</div>
 			<div class="day_number">01</div>
 			<div class="day_number">02</div>
 			<div class="day_number">03</div>
-			<div class="day_number">04</div>
+			<div class="day_number day_number_booked">
+				04
+				<div class="line_red lines"></div>
+				<div class="line_blue lines"></div>
+			</div>
 			<div class="day_number">05</div>
 			<div class="day_number">06</div>
 			<div class="day_number">07</div>
-			<div class="day_number_selected">
+			<div class="day_number day_number_selected">
 				08
-				<div id="line_red"></div>
-				<div id="line_green"></div>
-				<div id="line_blue"></div>
-				<div id="line_yellow"></div>
+				<div class="line_red lines"></div>
+				<div class="line_green lines"></div>
+				<div class="line_blue lines"></div>
+				<div class="line_yellow lines"></div>
 			</div>
 			<div class="day_number">09</div>
 			<div class="day_number">10</div>
@@ -83,7 +92,12 @@
 		 	<div class="day_number">13</div>
 		 	<div class="day_number">14</div>
 		 	<div class="day_number">15</div>
-			<div class="day_number">16</div>
+			<div class="day_number day_number_booked">
+				16
+				<div class="line_red lines"></div>
+				<div class="line_blue lines"></div>
+				<div class="line_yellow lines"></div>
+			</div>
 			<div class="day_number">17</div>
 			<div class="day_number">18</div>
 			<div class="day_number">19</div>
@@ -95,11 +109,14 @@
 			<div class="day_number">25</div>
 			<div class="day_number">26</div>
 			<div class="day_number">27</div>
-			<div class="day_number">28</div>
+			<div class="day_number day_number_booked">
+				28
+				<div class="line_blue lines"></div>
+			</div>
 			<div class="day_number">29</div>
 			<div class="day_number">30</div>
 			<div class="day_number">31</div>
-			<div class="day_number_up">01</div>
+			<div class="day_number day_number_up">01</div>
 		</div>
 
 	</section>
