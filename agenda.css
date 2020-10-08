@@ -42,7 +42,7 @@ main{
   border-bottom:3px solid;
   border-image:linear-gradient(90deg, rgba(255,255,255,0) 1%, #FFFF 50%, rgba(255,255,255,0) 100%);
   border-image-slice: 1;
-
+  position:relative;
 }
 
 #year_h2 i{
@@ -79,6 +79,54 @@ main{
   cursor:pointer;
   -webkit-transform: translate(-8px);
   transition:0.6s;
+}
+
+#add_event{
+  position:absolute;
+  display:inline-block;
+  top:auto;
+  left:2.5%;
+  z-index:1;
+}
+
+#add_event_button{
+  text-decoration:none;
+  border:none;
+  color:white;
+  font-size:1.7em;
+  text-shadow:1px 0 black, 0 1px black;
+  z-index:5;
+}
+
+#add_event_button:hover{
+  cursor:pointer;
+  color:#7DEA7D;
+  transition:0.4s;
+}
+
+#add_event_text{
+  display:none;
+  position:absolute;
+  width:700%;
+  background-color:#6E8AA9;
+  z-index:1;
+  padding:5%;
+  border-radius:8px;
+  top:85%;
+}
+
+#add_event_text:hover{
+  transform:scale(110%);
+  transition:0.5s;
+}
+
+#add_event_text a{
+  text-decoration:none;
+  color:white;
+}
+
+#add_event:hover #add_event_text{
+  display:block;
 }
 
 #list_days{
@@ -121,7 +169,6 @@ main{
   font-family:'Syne', 'Courier';
   color:#330000;
   padding:10%;
-  min-width:5%;
 }
 
 .day_number{
@@ -224,6 +271,11 @@ main{
   padding:2%;
 }
 
+#today header{
+  display:flex;
+  justify-content: space-between
+}
+
 #today_h2, #today_h3{
   text-align:right;
   font-size:2em;
@@ -271,7 +323,9 @@ main{
 
 .todo{
   font-size:1.5em;
-  padding:5%;
+  padding:5% 0 5% 0;
+  position:relative;
+  display:inline-block;
 }
 
 #todo_list time{
@@ -296,4 +350,78 @@ main{
 .todo:nth-child(4) i, .todo:nth-child(4) time{
   color:#0066FF;
   text-shadow:1px 0 1px grey;
+}
+
+#menu_button{
+  font-size:300%;
+  background-color:inherit;
+  border:none;
+  cursor:pointer;
+  color:white;
+  padding:0 15% 0 15%;
+  text-shadow:1px 0 black, 0 1px black;
+}
+
+#menu_dropdown{
+  display:none;
+  position:absolute;
+  white-space: nowrap;
+  list-style-type: none;
+  background-color:#333333;
+  width:550%;
+  border-radius:10px;
+  z-index:1;
+}
+
+#menu{
+  position:relative;
+  display:inline-block;
+  height:20%;
+  bottom:6%;
+}
+
+#menu:hover #menu_dropdown{
+  display:block;
+}
+
+#menu_button:hover{
+  color:#7DEA7D;
+}
+
+#menu_dropdown a, #icon a, #radix a{
+  text-decoration: none;
+  color:white;
+}
+
+#menu li{
+  padding:8% 5% 8% 5%;
+}
+
+#menu li:hover{
+  background-color:#72797B;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+#meeting, #icon, #nutella, #radix{
+  visibility:hidden;
+  position:absolute;
+  background-color:#333333;
+  color:white;
+  top:80%;
+  left:50%;
+  width:100%;
+  border-radius:8px;
+  font-size:0.8em;
+  z-index:1;
+  text-align:center;
+  margin-left:-50%;
+}
+
+.todo:hover{
+  cursor:help;
+}
+
+.todo1:hover #meeting, .todo2:hover #icon, .todo3:hover #nutella, .todo4:hover #radix{
+  visibility:visible;
 }

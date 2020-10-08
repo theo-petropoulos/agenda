@@ -16,6 +16,16 @@
 
 	<section id="today">
 		<header>
+
+			<nav id="menu">
+				<button id="menu_button"><i class="fa fa-bars" aria-hidden="true"></i></button>
+				<ul id="menu_dropdown">
+					<li><a href=""><i class="fa fa-user" aria-hidden="true"></i>  Mon compte</a></li>
+					<li><a href=""><i class="fa fa-cog" aria-hidden="true"></i>  Paramètres</a></li>
+					<li><a href=""><i class="fa fa-question-circle" aria-hidden="true"></i>  Aide & Commentaires</a></li>
+				</ul>
+			</nav>
+
 			<time datetime="2020-10-08">
 				<h2 id="today_h2"><span id="today_day">Jeudi</span> <span id="today_number">8</span></h2>
 				<h3 id="today_h3"><span id="today_month">Octobre</span><br><span id="today_year">2020</span></h3>
@@ -24,10 +34,26 @@
 
 		<section id="today_todo">
 			<ul id="todo_list">
-				<li class="todo"><i class="fa fa-square" aria-hidden="true"></i> <time datetime="09:00">09h00</time> - Meeting <strong>Satoshi Nakamoto</strong></li>
-				<li class="todo"><i class="fa fa-square" aria-hidden="true"></i> <time datetime="11:00">11h00</time> - Presentation <strong>ICON</strong></li>
-				<li class="todo"><i class="fa fa-square" aria-hidden="true"></i> <time datetime="16:00">16h00</time> - Goûter / Acheter <strong>Nutella</strong></li>
-				<li class="todo"><i class="fa fa-square" aria-hidden="true"></i> <time datetime="18:00">18h00</time> - Reveal <strong>Radix DLT</strong></li>
+
+				<li class="todo todo1">
+					<i class="fa fa-square" aria-hidden="true"></i> <time datetime="09:00">09h00</time> - Meeting <strong>Satoshi Nakamoto</strong>
+					<span id="meeting">Où : Tour CMA-CGM - 33e étage</span>
+				</li>
+
+				<li class="todo todo2">
+					<i class="fa fa-square" aria-hidden="true"></i> <time datetime="11:00">11h00</time> - Presentation <strong>ICON</strong>
+					<span id="icon"><a href="https://icon.foundation/">https://icon.foundation/</a></span>
+				</li>
+
+				<li class="todo todo3">
+					<i class="fa fa-square" aria-hidden="true"></i> <time datetime="16:00">16h00</time> - Goûter / Acheter <strong>Nutella</strong>
+					<span id ="nutella">2 pots de 1kg achetés = 1 offert</span>
+				</li>
+
+				<li class="todo todo4">
+					<i class="fa fa-square" aria-hidden="true"></i> <time datetime="18:00">18h00</time> - Reveal <strong>Radix DLT</strong>
+					<span id="radix"><a href="https://www.radixdlt.com/">https://www.radixdlt.com/</a></span>
+				</li>
 			</ul>
 		</section>
 
@@ -36,6 +62,10 @@
 	<section id="calendar">
 
 		<header id="year">
+			<span id="add_event">
+				<a id="add_event_button" href="formulaire.html"><i class="fa fa-plus" aria-hidden="true"></i></a>
+				<span id="add_event_text"><a href="formulaire.html"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> Ajouter un évènement</a></span>
+			</span>
 			<h2 id="year_h2"><span class="year_fade"> 2019 </span><i class="fa fa-chevron-left" aria-hidden="true"></i>2020<i class="fa fa-chevron-right" aria-hidden="true"></i><span class="year_fade"> 2021 </span></h2>
 		</header>
 
