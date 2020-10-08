@@ -61,12 +61,38 @@ main{
   filter:blur(1px);
 }
 
-#year_h2:hover .year_fade{
+.fa-chevron-left, .fa-chevron-right{
+	position:relative;
+}
+
+.year_fade_right{
+	position:absolute;
+	font-family:'Syne', 'Courier';
+	left:200%;
+	bottom:0;
+	font-size:1em;
+}
+
+.year_fade_left{
+	position:absolute;
+	font-family:'Syne', 'Courier';
+	right:200%;
+	bottom:-1%;
+	font-size:1em;
+}
+
+.fa-chevron-right:hover .year_fade_right{
   opacity:1;
   filter:blur(0);
   transition:0.6s;
-  font-size:1em;
+  font-size:1.5em;
+}
 
+.fa-chevron-left:hover .year_fade_left{
+  opacity:1;
+  filter:blur(0);
+  transition:0.6s;
+  font-size:1.5em;
 }
 
 .fa-chevron-right:hover{
