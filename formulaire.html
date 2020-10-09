@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+	<head>
+		<title>Ajouter un évènement</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="agenda.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+		<link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet"> 
+	</head>
+
+<body>
+
+	<main id="formulaire_main">
+
+		<section id="formulaire_all">
+
+			<header>
+				<h1>Ajouter un évènement</h1>
+			</header>
+
+
+			<form id="formulaire_2" action="agenda.html">
+
+							<div id="formulaire_container_2">
+
+								    <label for="event_name">Titre:</label><br>
+								    <input type="text" id="event_name" name="event_name" placeholder="Anniversaire de Léon" required><br>
+
+								    <label for="event_description">Description:</label><br>
+								    <input type="text" id="event_description" name="event_description" placeholder="Il fête ses 25 ans"><br>
+
+								    <label for="event_date">Date:</label>
+									<input type="date" id="event_date" name="event_date" value="2020-08-10" min="2020-08-10" required><br>
+
+
+									<label for="event_time">Heure:</label>
+									<input type="time" id="event_time" name="event_time" required><br>
+
+								    <label for="event_rappel">Définir un rappel</label><input type="checkbox" id="event_rappel" name="event_rappel" value="event_rappel"><br>
+
+								    <label for="event_rappel_y">Me rappeler:</label>
+								    <select id="event_rappel_y" name="event_rappel_y">
+								    	<option value=""> </option>
+										<option value="30_minutes">30 minutes avant</option>
+										<option value="1_heure">Une heure avant</option>
+										<option value="2_heures">Deux heures avant</option>
+										<option value="1_jour">Un jour avant</option>
+										<option value="2_jours">Deux jours avant</option>
+										<option value="1_semaine">Une semaine avant</option>
+									</select>
+
+							 </div>
+						  
+						    <input id="submit_button_2" type="submit" value="Ajouter">
+
+						  </form>
+
+				</section>
+
+		</main>
+
+	</body>
+
+</html>

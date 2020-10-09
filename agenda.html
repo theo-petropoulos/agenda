@@ -62,47 +62,58 @@
 	<section id="calendar">
 
 		<header id="year">
-			<span id="add_event">
-				<button id="add_event_button" href=""><i class="fa fa-plus" aria-hidden="true"></i></button>
+			<div id="add_event">
+				<button id="add_event_button"><i class="fa fa-plus" aria-hidden="true"></i></button>
 				<!-- <span id="add_event_text"><a href="formulaire.html"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> Ajouter un évènement</a></span> -->
-				<span id="add_event_text">
+				<div id="add_event_text">
+
+					<a href="formulaire.html" id="new_tab">Ouvrir dans une<br>nouvelle page <i class="fa fa-external-link" aria-hidden="true"></i></a>
+					<br><br>
 
 					<form id="formulaire" action="agenda.html">
+
 						<div id="formulaire_container">
+							<div id="form_left">
 
-						    <label for="event_name">Titre:</label><br>
-						    <input type="text" id="event_name" name="event_name" placeholder="Anniversaire de Léon" required><br><br>
+							    <label for="event_name">Titre:</label><br>
+							    <input type="text" id="event_name" name="event_name" placeholder="Anniversaire de Léon" required><br><br><br>
 
-						    <label for="event_descritpion">Description:</label><br>
-						    <input type="text" id="event_descritpion" name="event_descritpion" placeholder="Il fête ses 25 ans"><br><br>
+							    <label for="event_description">Description:</label><br>
+							    <input type="text" id="event_description" name="event_description" placeholder="Il fête ses 25 ans"><br><br><br>
 
-						    <label for="event_date">Date:</label>
-							<input type="date" id="event_date" name="event_date" value="2020-08-10" min="2020-08-10" required><br><br>
+							    <label for="event_date">Date:</label>
+								<input type="date" id="event_date" name="event_date" value="2020-08-10" min="2020-08-10" required>
 
-							<label for="event_time">Heure:</label>
-							<input type="time" id="event_time" name="event_time" required><br><br>
+							</div>
 
-						    <input type="checkbox" id="event_rappel" name="event_rappel" value="event_rappel"><label for="event_rappel">Définir un rappel</label><br><br> 
+							<div id="form_right">
 
-						    <label for="event_rappel_y">Me rappeler:</label>
-						    <select id="event_rappel_y" name="event_rappel_y">
-						    	<option value=""> </option>
-								<option value="30_minutes">30 minutes avant</option>
-								<option value="1_heure">Une heure avant</option>
-								<option value="2_heures">Deux heures avant</option>
-								<option value="1_jour">Un jour avant</option>
-								<option value="2_jours">Deux jours avant</option>
-								<option value="1_semaine">Une semaine avant</option>
-							</select>
+								<label for="event_time">Heure:</label>
+								<input type="time" id="event_time" name="event_time" required><br><br>
+
+							    <input type="checkbox" id="event_rappel" name="event_rappel" value="event_rappel"><label for="event_rappel">Définir un rappel</label><br><br> 
+
+							    <label for="event_rappel_y">Me rappeler:</label>
+							    <select id="event_rappel_y" name="event_rappel_y">
+							    	<option value=""> </option>
+									<option value="30_minutes">30 minutes avant</option>
+									<option value="1_heure">Une heure avant</option>
+									<option value="2_heures">Deux heures avant</option>
+									<option value="1_jour">Un jour avant</option>
+									<option value="2_jours">Deux jours avant</option>
+									<option value="1_semaine">Une semaine avant</option>
+								</select>
+
+							</div>
 
 						 </div>
 					  
-					    <input type="submit" value="Submit">
+					    <input id="submit_button" type="submit" value="Ajouter">
 
 					  </form>
 
-				</span>
-			</span>
+				</div>
+			</div>
 			<h2 id="year_h2">
 				<i class="fa fa-chevron-left" aria-hidden="true">
 					<span class="year_fade year_fade_left">2019</span>
