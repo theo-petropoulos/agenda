@@ -220,6 +220,14 @@ main{
   background:#99A2A5;
 }
 
+.day_number:nth-child(10){
+	border-bottom-right-radius:6px;
+}
+
+.day_number_up{
+	border-top-left-radius:8px;
+}
+
 .day_name_last{
   padding-right:0;
 }
@@ -234,7 +242,7 @@ main{
 	border:1px solid black;
 	background-color:#DEDDD5;
 	border-radius:6px;
-  font-weight:600;
+  	font-weight:600;
 }
 
 .day_number:nth-child(7n), .day_name:nth-child(7){
