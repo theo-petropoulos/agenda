@@ -453,6 +453,19 @@ main{
   visibility:visible;
 }
 
+.button_modify{
+	border-radius:6px;
+	background-color:#DEDDD5;
+	padding:1% 3% 1% 3%;
+	font-family:'Syne', 'Courier';
+	margin-bottom:2%;
+	margin-top:1%;
+}
+
+.button_modify:hover{
+	cursor:pointer;
+}
+
 
 /*****FORMULAIRE-INTERNE*****/
 
@@ -558,6 +571,7 @@ main{
   font-family:'Balsamiq Sans', 'Courier';
   color:white;
   font-size:120%;
+  text-shadow:1px 0 black, 0 1px black, -1px 0 #9AC4EE, 0 -1px #9AC4EE; ;
 }
 
 #submit_button_2{
@@ -573,4 +587,15 @@ main{
 #submit_button_2:hover{
   background:#6A6A6A;
   cursor:pointer;
+}
+
+input#event_rappel{
+	width:20px;
+	display:inline-block;
+	margin-left:3%;
+}
+
+#label_checkbox{
+	margin-bottom:3%;	
+	margin-top:2%;
 }
