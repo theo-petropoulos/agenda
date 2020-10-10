@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 		<link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet"> 
+		<script src="https://kit.fontawesome.com/9ddb75d515.js" crossorigin="anonymous"></script>
 	</head>
 
 <body>
@@ -39,25 +40,34 @@
 									<label for="event_time">Heure:</label>
 									<input type="time" id="event_time" name="event_time" required><br>
 									<div id="label_checkbox">
-								   	 <label for="event_rappel">Définir un rappel</label><input type="checkbox" id="event_rappel" name="event_rappel" value="event_rappel">
+								   	 	<label for="event_rappel">Définir un rappel</label><input type="checkbox" id="event_rappel" name="event_rappel" value="event_rappel">
+
+								   	 	<div id="label_rappel_y">
+									   	 	<label for="event_rappel_y">Me rappeler:</label>
+									    	<select id="event_rappel_y" name="event_rappel_y">
+										    	<option value=""> </option>
+												<option value="30_minutes">30 minutes avant</option>
+												<option value="1_heure">Une heure avant</option>
+												<option value="2_heures">Deux heures avant</option>
+												<option value="1_jour">Un jour avant</option>
+												<option value="2_jours">Deux jours avant</option>
+												<option value="1_semaine">Une semaine avant</option>
+											</select>
+										</div>
 									</div>
 
-								    <label for="event_rappel_y">Me rappeler:</label>
-								    <select id="event_rappel_y" name="event_rappel_y">
-								    	<option value=""> </option>
-										<option value="30_minutes">30 minutes avant</option>
-										<option value="1_heure">Une heure avant</option>
-										<option value="2_heures">Deux heures avant</option>
-										<option value="1_jour">Un jour avant</option>
-										<option value="2_jours">Deux jours avant</option>
-										<option value="1_semaine">Une semaine avant</option>
-									</select>
+								    
 
 							 </div>
 						  
 						    <input id="submit_button_2" type="submit" value="Ajouter">
 
 						  </form>
+
+
+						  <div id="back_agenda">
+						  	<a href="agenda.html"><i class="fas fa-caret-square-left"></i></a>
+						  </div>
 
 				</section>
 

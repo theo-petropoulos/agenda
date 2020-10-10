@@ -518,6 +518,7 @@ main{
 
 /*****FORMULAIRE-EXTERNE*****/
 
+
 #formulaire_main{
   display:flex;
   justify-content: center;
@@ -531,6 +532,7 @@ main{
   background: linear-gradient(45deg, rgba(154,196,238,1) 15%, rgba(222,122,147,1) 85%); 
   display:flex;
   flex-direction:column;
+  position:relative;
   text-align:center;
   border-radius:10px;
   border:2px solid white;
@@ -565,13 +567,14 @@ main{
   font-family:'Syne', 'Courier';
   padding:6% 10% 6% 10%;
   font-size:160%;
-  text-shadow:1px 0 black, 0 1px black, -1px 0 #9AC4EE, 0 -1px #9AC4EE;}
+  text-shadow:1px 0 black, 0 1px black, -1px 0 #9AC4EE, 0 -1px #9AC4EE;
+}
 
 #formulaire_container_2 label{
   font-family:'Balsamiq Sans', 'Courier';
   color:white;
   font-size:120%;
-  text-shadow:1px 0 black, 0 1px black, -1px 0 #9AC4EE, 0 -1px #9AC4EE; ;
+  text-shadow:1px 0 black, 0 1px black, -1px 0 #9AC4EE, 0 -1px #9AC4EE;
 }
 
 #submit_button_2{
@@ -598,4 +601,26 @@ input#event_rappel{
 #label_checkbox{
 	margin-bottom:3%;	
 	margin-top:2%;
+}
+
+#label_rappel_y{
+	display:none;
+}
+
+#event_rappel:checked~#label_rappel_y{
+	display:block;
+	margin-top:2%;
+}
+
+#back_agenda{
+	position:absolute;
+	bottom:2%;
+	left:4%;
+	border-radius:4px;
+}
+
+#back_agenda a{
+	color:white;
+	font-size:130%;
+	text-shadow:1px 0 black, 0 1px black, -1px 0 #9AC4EE, 0 -1px #9AC4EE;
 }
